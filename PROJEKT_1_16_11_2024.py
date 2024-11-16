@@ -7,6 +7,7 @@ discord: Petra V.
 """
 
 users = {"bob":"123", "ann":"pass123", "mike":"password123", "liz":"pass123"}
+
 text_1 = """Situated about 10 miles west of Kemmerer,
 Fossil Butte is a ruggedly impressive
 topographic feature that rises sharply
@@ -15,6 +16,7 @@ to an elevation of more than 7500 feet
 above sea level. The butte is located just
 north of US 30N and the Union Pacific Railroad,
 which traverse the valley."""
+
 slova_text_1 = text_1.split()
 pocet_slov_text_1 = len(slova_text_1)
 pocet_slov_text_1_velke_pismeno = sum(1 for slovo in slova_text_1 if slovo[0].isupper())
@@ -33,6 +35,7 @@ and steepen abruptly. Overlying them and extending
 to the top of the butte are the much steeper
 buff-to-white beds of the Green River Formation,
 which are about 300 feet thick."""
+
 slova_text_2 = text_2.split()
 pocet_slov_text_2 = len(slova_text_2)
 pocet_slov_text_2_velke_pismeno = sum(1 for slovo in slova_text_2 if slovo[0].isupper())
@@ -41,15 +44,6 @@ pocet_slov_text_2_malymi_pismeny = sum(1 for slovo in slova_text_2 if slovo.islo
 pocet_cisel_text_2 = sum(1 for slovo in slova_text_2 if slovo.isdigit())
 soucet_cisel_text_2 = sum(int(slovo) for slovo in slova_text_2 if slovo.isdigit())
 delky_slov_text_2 = [len(slovo) for slovo in slova_text_2]
-
-delky_slov_text_2.sort()
-frekvence_2 = {}
-for item in delky_slov_text_2:
-   if item in frekvence_2:
-      frekvence_2[item] = frekvence_2[item] + 1
-   else:
-      frekvence_2[item] = 1
-
 
 text_3 = """The monument contains 8198 acres and protects
 a portion of the largest deposit of freshwater fish
@@ -70,14 +64,6 @@ soucet_cisel_text_3 = sum(int(slovo) for slovo in slova_text_3 if slovo.isdigit(
 delky_slov_text_3 = [len(slovo) for slovo in slova_text_3]
 delky_slov_text_3.sort()
 
-frekvence_3 = {}
-for item in delky_slov_text_3:
-   if item in frekvence_3:
-      frekvence_3[item] = frekvence_3[item] + 1
-   else:
-      frekvence_3[item] = 1
-
-
 print("Dobrý den, vítejte v textovém analyzátoru. ")
 jmeno = input("Zadejte uživatelské jméno: ")
 heslo = input("Zadejte heslo: ")
@@ -94,6 +80,7 @@ if jmeno in users and users[jmeno] == heslo:
       print("-" * 40)
       print("DÉLKA | POČET") 
       print("-" * 40)
+           
       frekvence_1 = {}
       for item in delky_slov_text_1:
          if item in frekvence_1:
@@ -114,6 +101,7 @@ if jmeno in users and users[jmeno] == heslo:
       print("-" * 40)
       print("DÉLKA | POČET") 
       print("-" * 40)
+    
       frekvence_2 = {}
       for item in delky_slov_text_2:
          if item in frekvence_2:
@@ -134,6 +122,7 @@ if jmeno in users and users[jmeno] == heslo:
       print("-" * 40)
       print("DÉLKA | POČET") 
       print("-" * 40)
+    
       frekvence_3 = {}
       for item in delky_slov_text_3:
          if item in frekvence_3:
