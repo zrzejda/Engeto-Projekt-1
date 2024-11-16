@@ -54,6 +54,7 @@ represent several varieties of perch, as well as
 other freshwater genera and herring similar to those
 in modern oceans. Other fish such as paddlefish,
 garpike and stingray are also present."""
+
 slova_text_3 = text_3.split()
 pocet_slov_text_3 = len(slova_text_3)
 pocet_slov_text_3_velke_pismeno = sum(1 for slovo in slova_text_3 if slovo[0].isupper())
@@ -67,6 +68,7 @@ delky_slov_text_3.sort()
 print("Dobrý den, vítejte v textovém analyzátoru. ")
 jmeno = input("Zadejte uživatelské jméno: ")
 heslo = input("Zadejte heslo: ")
+
 if jmeno in users and users[jmeno] == heslo:
    print("Přihlášení bylo úspěšné.")
    cislo_textu = int(input("Zvolte text č. 1, 2 nebo 3. "))
